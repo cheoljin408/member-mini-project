@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class MemberDAO {
 	private String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
@@ -79,6 +80,30 @@ public class MemberDAO {
 			closeAll(rs, pstmt, con);
 		}
 		return vo;
+	}
+
+	public ArrayList<MemberVO> findMemberListByAddress(String address) throws SQLException {
+		ArrayList<MemberVO> list = new ArrayList<MemberVO>();
+		
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		try {
+			con = getConnection();
+			String sql = "select id, name from member where address=?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, address);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				list.add(new MemberVO(rs.getString(1), null, rs.getString(2), address));
+			}
+		} finally {
+			closeAll(rs, pstmt, con);
+		}
+		
+		return list;
 	}
 	
 }
