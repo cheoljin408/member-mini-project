@@ -22,6 +22,13 @@
 	%>
 	<h3>로그인 성공</h3>
 	<%=mvo.getName()%> 님 환영합니다.
+	<script type="text/javascript">
+		function logout(){
+			document.getElementById("logoutForm").submit();
+		}
+	</script>
+	<form action = "LogoutServlet" method = "post" id = "logoutForm"></form>
+	<a href = "#" onclick = "logout()">로그아웃</a>
 	<%
 	}
 	%>
