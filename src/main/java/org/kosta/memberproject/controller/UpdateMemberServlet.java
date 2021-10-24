@@ -25,7 +25,7 @@ public class UpdateMemberServlet extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		HttpSession session = request.getSession(false);
 		if(session == null || session.getAttribute("mvo") == null) {
-			response.sendRedirect("test-login.jsp");	//login.jsp 수정
+			response.sendRedirect("index.jsp");	//index.jsp 수정
 		}
 		String id = request.getParameter("id");
 		String password = request.getParameter("password");

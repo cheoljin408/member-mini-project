@@ -9,7 +9,7 @@
 </head>
 <body>
 	<% MemberVO vo = (MemberVO)session.getAttribute("mvo"); %>
-	<a href = "test-login.jsp">Home</a>
+	<a href = "index.jsp">Home</a>
 	<hr>
 	<h3>회원정보수정완료</h3>
 	아이디 : <%= vo.getId() %> 

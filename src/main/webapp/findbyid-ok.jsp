@@ -11,7 +11,7 @@
 		<%
 			MemberVO vo = (MemberVO)request.getAttribute("mvo");
 		%>
-		<a href="test-findbyid.jsp">Home</a>
+		<a href="index.jsp">Home</a>
 		<h3>검색결과</h3>
 		<table>
 			<thead>
