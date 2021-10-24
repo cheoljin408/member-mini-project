@@ -21,6 +21,6 @@ public class LogoutServlet extends HttpServlet {
 		if(session!=null) {
 			session.invalidate();
 		}
-		response.sendRedirect("test-login.jsp");	//index.jsp 로 수정
+		response.sendRedirect("index.jsp");	//index.jsp 로 수정
 	}
 }

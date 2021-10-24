@@ -13,7 +13,7 @@
 			@SuppressWarnings("unchecked")
 			ArrayList<MemberVO> list = (ArrayList<MemberVO>)request.getAttribute("memberList");
 		%>
-		<a href="test-findbyaddress.jsp">Home</a>
+		<a href="index.jsp">Home</a>
 		<h3>검색결과</h3>
 		<table>
 			<thead>

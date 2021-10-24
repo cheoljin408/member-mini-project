@@ -12,7 +12,7 @@
 	MemberVO vo = (MemberVO)session.getAttribute("mvo"); 
 	if (vo != null) {	
 	%>
-	<a href = "test-login.jsp">Home</a>	<!--  index.jsp 수정 -->
+	<a href = "index.jsp">Home</a>	<!--  index.jsp 수정 -->
 	<hr>
 	<form action = "UpdateMemberServlet" method= "post">
 		아이디 : <input type = "text" name = "id" value = <%= vo.getId() %> readonly="readonly">
@@ -28,7 +28,7 @@
 	<%
 	}
 	else{
-		response.sendRedirect("test-login.jsp");	//index.jsp 수정
+		response.sendRedirect("index.jsp");	//index.jsp 수정
 	}
 	%>
 </body>

@@ -7,9 +7,7 @@
 <link rel="stylesheet" type="text/css" href="css/home.css">
 </head>
 <body>
-	<div class="container">
-		<a href="index.jsp">Home</a><br>
-		<br> 회원가입을 축하합니다!
-	</div>
+	<a href="index.jsp">Home</a><br>
+	<br> 회원가입을 축하합니다!
 </body>
 </html>

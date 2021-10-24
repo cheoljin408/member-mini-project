@@ -29,7 +29,7 @@ public class LoginServlet extends HttpServlet {
 			
 			if(vo!=null) {
 				request.getSession().setAttribute("mvo", vo);
-				path = "test-login.jsp";	//index.jsp로 수정해야할 부분
+				path = "index.jsp";	//index.jsp로 수정해야할 부분
 			}else {
 				path = "login-fail.jsp";
 			}
