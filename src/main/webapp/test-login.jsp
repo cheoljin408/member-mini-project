@@ -29,6 +29,10 @@
 	</script>
 	<form action = "LogoutServlet" method = "post" id = "logoutForm"></form>
 	<a href = "#" onclick = "logout()">로그아웃</a>
+	
+	<hr>
+	<h3>회원정보 수정</h3>
+	<a href = "update-member-form.jsp">회원정보수정</a>
 	<%
 	}
 	%>
