@@ -8,14 +8,12 @@
 	<title>회원정보 수정 완료</title>
 </head>
 <body>
-	<% MemberVO vo = (MemberVO)session.getAttribute("mvo"); %>
-	<a href = "index.jsp">Home</a>
-	<hr>
-	<h3>회원정보수정완료</h3>
-	아이디 : <%= vo.getId() %> 
-	<br>
-	이름 : <%= vo.getName() %>
-	<br>
-	주소 : <%= vo.getAddress() %>
+	<a href="index.jsp">Home</a>
+	<h3>${sessionScope.mvo.name}님의 회원정보수정 결과</h3>
+	<p>아이디: ${sessionScope.mvo.id}</p>
+	<p>패스워드:${sessionScope.mvo.password}</p>
+	<p>이름: ${sessionScope.mvo.name}</p>
+	<p>주소: ${sessionScope.mvo.address}</p>
+	<p>생년월일: ${sessionScope.mvo.birth}</p>
 </body>
 </html>

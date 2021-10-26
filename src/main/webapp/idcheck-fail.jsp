@@ -15,7 +15,7 @@
 </script>
 </head>
 <body bgcolor="orange" onunload="closePopup()">
-	<%=request.getParameter("id")%> 아이디 중복되어 사용불가
+	${param.id} 아이디 중복되어 사용불가
 	<br>
 	<br>
 	<button onclick="closePopup()">확인</button>
