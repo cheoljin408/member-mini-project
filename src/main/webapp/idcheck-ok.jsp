@@ -13,7 +13,7 @@
 </script>
 </head>
 <body bgcolor="yellow" onunload="closePopup()">
-	<%=request.getParameter("id")%>
+	${param.id}
 	아이디 사용가능합니다!
 	<br>
 	<br>
