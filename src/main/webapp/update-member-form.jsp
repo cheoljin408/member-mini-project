@@ -27,7 +27,7 @@
 				<br>
 				주소 : <input type="text" name="address" value="${sessionScope.mvo.address}" required="required">
 				<br>
-				생년월일: <input type="date" name="birthday" required="required" value="${sessionScope.mvo.birth}" >
+				생년월일: <input type="date" name="birth" required="required" value="${sessionScope.mvo.birth}" >
 				<br>
 				<button type="submit">수정</button>
 			</form>	

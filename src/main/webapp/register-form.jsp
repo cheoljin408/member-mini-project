@@ -40,7 +40,7 @@
 			<input type="password" name="confirmPassword" id="confirmPass" required="required" placeholder="패스워드확인"><br> 
 			<input type="text" name="name" required="required" placeholder="이름"><br> 
 			<input type="text" name="address" required="required" placeholder="주소"><br>
-			<input type="date" name="birthday" required="required" placeholder="생년월일" >
+			<input type="date" name="birth" required="required" placeholder="생년월일" >
 			<button type="submit">가입하기</button>
 		</form>
 	</div>
