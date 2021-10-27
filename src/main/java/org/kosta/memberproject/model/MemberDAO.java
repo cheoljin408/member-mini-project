@@ -67,13 +67,13 @@ public class MemberDAO {
 
 		try {
 			con = dataSource.getConnection();
-			String sql = "select * from mvc_member where id = ? and password = ?";
+			String sql = "select name, address, to_char(birth, 'yyyy-mm-dd'), regdate from mvc_member where id = ? and password = ?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, id);
 			pstmt.setString(2, pass);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
-				vo = new MemberVO(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4),rs.getString(5),rs.getString(6));
+				vo = new MemberVO(id, pass, rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4));
 			}
 		} finally {
 			closeAll(rs, pstmt, con);
@@ -110,10 +110,10 @@ public class MemberDAO {
 		PreparedStatement pstmt = null;
 		try {
 			con = dataSource.getConnection();
-			String sql = "update mvc_member set name = ? ,password = ?,address = ?,birth = to_date(?,'yyyy-mm-dd') where id = ?";
+			String sql = "update mvc_member set password = ?, name = ?, address = ?, birth = to_date(?, 'yyyy-mm-dd') where id = ?";
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, vo.getName());
-			pstmt.setString(2, vo.getPassword());
+			pstmt.setString(1, vo.getPassword());
+			pstmt.setString(2, vo.getName());
 			pstmt.setString(3, vo.getAddress());
 			pstmt.setString(4, vo.getBirth());
 			pstmt.setString(5, vo.getId());
@@ -130,7 +130,7 @@ public class MemberDAO {
 			con = dataSource.getConnection();
 			StringBuilder sql = new StringBuilder();
 			sql.append("insert into mvc_member(id,password,name,address,birth,regdate)");
-			sql.append(" values(?,?,?,?,do_date(?,'yyyy-mm-dd'),sysdate)");
+			sql.append(" values(?,?,?,?,to_date(?,'yyyy-mm-dd'),sysdate)");
 			pstmt = con.prepareStatement(sql.toString());
 			pstmt.setString(1, vo.getId());
 			pstmt.setString(2, vo.getPassword());
