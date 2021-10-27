@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <title>아이디 사용가능</title>
 <script type="text/javascript">
-	opener.document.getElementById("flag").value="<%=request.getParameter("id")%>";
+	opener.document.getElementById("flag").value="${param.id}";
 	function closePopup() {
 		opener.document.getElementById("pass").focus();
 		self.close();
