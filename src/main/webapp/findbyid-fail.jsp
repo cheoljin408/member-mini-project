@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-			alert("<%=request.getParameter("id") %> 는 존재하지 않는 아이디입니다");
+			alert("${param.id} 는 존재하지 않는 아이디입니다");
 			location.href = "index.jsp";
 		</script>
 	</body>

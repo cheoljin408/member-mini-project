@@ -18,7 +18,7 @@
 		<c:otherwise>
 			<a href="index.jsp">Home</a>	<!--  index.jsp 수정 -->
 			<hr>
-			<form action = "UpdateMemberServlet" method= "post">
+			<form action = "UpdateMemberController.do" method= "post">
 				아이디 : <input type="text" name="id" value="${sessionScope.mvo.id}" readonly="readonly">
 				<br>
 				패스워드 : <input type="password" name="password" value="${sessionScope.mvo.password}" required="required">
