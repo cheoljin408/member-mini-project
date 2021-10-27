@@ -1,7 +1,6 @@
 package org.kosta.memberproject.model;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -106,7 +105,7 @@ public class MemberDAO {
 		return list;
 	}
 
-	public void udpateMember(MemberVO vo) throws SQLException {
+	public void updateMember(MemberVO vo) throws SQLException {
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		try {
