@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>test-findbyid</title>
+		<title>미니 프로젝트</title>
 	</head>
 	<body>
 		<h3>아이디로 회원 검색</h3>
