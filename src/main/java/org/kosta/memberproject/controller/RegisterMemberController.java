@@ -19,6 +19,7 @@ public class RegisterMemberController implements Controller {
 		MemberVO vo = new MemberVO(id, password, name, address, birth, null);
 		MemberDAO.getInstance().register(vo);
 		
-		return "redirect:register-result.jsp";
+		return "SendEmailController.do";
+		// return "redirect:register-result.jsp";
 	}
 }
