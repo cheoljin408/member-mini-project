@@ -122,5 +122,8 @@ $RECYCLE.BIN/
 # test-sql
 *.sql
 
+# PasswordVO.java
+PasswordVO.java
+
 # End of https://www.toptal.com/developers/gitignore/api/windows,eclipse,java
 /build/
