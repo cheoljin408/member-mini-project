@@ -1,15 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>회원관리</title>
-<link rel="stylesheet" type="text/css" href="css/home.css">
-</head>
-<body>
-	<div class="container">
-		<a href="index.jsp">Home</a>
-		<hr>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<title>회원관리</title>
+		<link rel="stylesheet" type="text/css" href="css/home.css">
+	</head>
+	<body>
+		<div class = "jumbotron jumbotron-fluid">
+			<div class="container">
+				<h1><a href="index.jsp">MemberProject Home</a></h1>
+			</div> <%-- container div --%>
+		</div> <%-- jumbtron div --%>
 		<script type="text/javascript">
 			function checkRegForm() {
 				if (document.getElementById("pass").value != document
@@ -51,19 +58,41 @@
 			        }
 			    }
 		</script>
-		<form action="RegisterMemberController.do" method="post" onsubmit="return checkRegForm()">
-			<input type="text" name="id" id="id" required="required" placeholder="아이디"> <input type="hidden" id="flag" value="">
-			<button type="button" onclick="checkId()">중복확인</button><br> 
-			<input type="password" name="password" id="pass" required="required" placeholder="패스워드" maxlength="100" onkeyup="return passwordChanged();"><br>
-			<span id="strength">패스워드 강도</span><br>
-			<input type="password" name="confirmPassword" id="confirmPass" required="required" placeholder="패스워드확인"><br> 
-			<input type="text" name="name" required="required" placeholder="이름"><br> 
-			<input type="text" name="address" required="required" placeholder="주소"><br>
-			<input type="date" name="birth" required="required" placeholder="생년월일" >
-			<button type="submit">가입하기</button>
-		</form>
-	</div>
-</body>
+		<div class = "container">
+			<div class = "row">
+				<div class="col-sm-4 offset-sm-4">	
+					<form action="RegisterMemberController.do" method="post" onsubmit="return checkRegForm()">
+					<div class="input-group mb-3">
+						<input type="text" class="form-control" name="id" id="id" required="required" placeholder="아이디">
+						<input type="hidden" id="flag" value="">
+						<div class="input-group-append">
+							<button type="button" onclick="checkId()" class="btn btn-outline-primary"> 중복 확인 </button> 
+						</div> <%-- input -group-append --%>
+				 	</div> <%-- input group mb-3 --%>
+				 	<div class="input-group mb-3"> 
+						<input type="password" class="form-control" name="password" id="pass" required="required" placeholder="패스워드" maxlength="100" onkeyup="return passwordChanged();">
+						<div class="input-group-append">
+							<span id="strength" class = "input-group-text">패스워드 강도</span>
+						</div>
+					</div> <%-- input group mb-3 --%> 
+					<div class="input-group mb-3">
+						<input type="password" class="form-control" name="confirmPassword" id="confirmPass" required="required" placeholder="패스워드확인">
+					</div>
+					<div class="input-group mb-3">
+						<input type="text" class="form-control" name="name" required="required" placeholder="이름">
+					</div> 
+					<div class="input-group mb-3">
+						<input type="text" class="form-control" name="address" required="required" placeholder="주소">
+					</div>
+					<div class="input-group mb-3">	
+						<input type="date" class="form-control" name="birth" required="required" placeholder="생년월일" >
+					</div>
+						<button type="submit" class="btn btn-primary btn-block">가입하기</button>
+					</form>
+				</div><%--col-sm-4 offset-sm-4 div --%>
+			</div>  <%-- row div --%>	
+		</div> <%-- container --%>
+	</body>
 </html>
 
 
